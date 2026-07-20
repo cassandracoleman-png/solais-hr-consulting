@@ -398,6 +398,15 @@
         .who-icon { font-size: 28px; margin-bottom: 12px; }
         .who-card h3 { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 8px; }
         .who-card p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .who-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: #fff;
+            border: 2px solid rgba(255,255,255,0.4);
+            padding: 14px 32px; border-radius: 10px;
+            font-size: 16px; font-weight: 600; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .who-cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
 
         /* ── SECTION DIVIDER ── */
         .section-divider {
@@ -424,9 +433,29 @@
         /* ── PRODUCTS ── */
         .products { background: var(--purple-pale); }
         .products-grid {
-            display: grid; grid-template-columns: 1fr;
-            max-width: 480px; margin: 52px auto 0;
-            gap: 28px;
+            display: grid; grid-template-columns: 1fr 440px;
+            max-width: 1040px; margin: 52px auto 0;
+            gap: 40px; align-items: start;
+        }
+        .product-benefits {
+            padding: 32px 8px;
+        }
+        .product-benefits h4 {
+            font-family: var(--font-display);
+            font-size: 19px; font-weight: 700;
+            color: var(--purple-deep); margin-bottom: 6px;
+        }
+        .product-benefits .product-benefits-sub {
+            font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;
+        }
+        .product-benefits ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        .product-benefits li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: var(--text); line-height: 1.6;
+        }
+        .product-benefits li::before {
+            content: "✦"; color: var(--purple-mid);
+            font-size: 12px; margin-top: 4px; flex-shrink: 0;
         }
         .product-card {
             background: var(--surface);
@@ -592,7 +621,7 @@
         .contact .section-title { color: #fff; }
         .contact .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto 40px; }
         .contact-options {
-            display: grid; grid-template-columns: repeat(3, 1fr);
+            display: grid; grid-template-columns: repeat(2, 1fr);
             gap: 16px; margin-bottom: 40px;
         }
         .contact-option {
@@ -626,6 +655,48 @@
             font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 8px;
         }
 
+        /* ── ARE YOU READY TO RISE FORM ── */
+        .rise-form-section { background: var(--surface); }
+        .rise-form-inner { max-width: 780px; margin: 0 auto; }
+        .rise-form-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.2vw, 36px); font-weight: 700;
+            color: var(--navy); text-align: center; margin-bottom: 52px;
+        }
+        .rise-form-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 30px 48px; margin-bottom: 12px;
+        }
+        .rise-field label {
+            display: block; font-size: 14px; color: var(--purple-mid);
+            margin-bottom: 12px;
+        }
+        .rise-field input, .rise-field select {
+            width: 100%; border: none; border-bottom: 1.5px solid var(--navy);
+            background: transparent; border-radius: 0;
+            padding: 4px 2px 10px; font-family: var(--font-body);
+            font-size: 15px; color: var(--text); appearance: auto;
+        }
+        .rise-field input:focus, .rise-field select:focus {
+            outline: none; border-bottom-color: var(--purple-mid);
+        }
+        .rise-field-full { grid-column: 1 / -1; }
+        .rise-form-submit-wrap { text-align: center; margin-top: 36px; }
+        .rise-form-submit-wrap .btn { width: 100%; max-width: 560px; justify-content: center; }
+        .rise-form-note { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 16px; }
+
+        /* Rise form on the dark Contact section needs light text/borders */
+        .contact .rise-field label { color: rgba(255,255,255,0.75); }
+        .contact .rise-field input, .contact .rise-field select {
+            color: #fff; border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .contact .rise-field input::placeholder { color: rgba(255,255,255,0.4); }
+        .contact .rise-field select option { color: var(--text); }
+        .contact .rise-field input:focus, .contact .rise-field select:focus {
+            border-bottom-color: var(--gold);
+        }
+        .contact .rise-form-note { color: rgba(255,255,255,0.55); }
+
         /* ── FOOTER ── */
         footer {
             background: #1E1330; color: rgba(255,255,255,0.5);
@@ -652,6 +723,7 @@
             .about-photo-wrap { position: static; }
             .about-photo { max-width: 280px; margin: 0 auto; }
             .contact-options { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
+            .rise-form-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 640px) {
             .nav-links { display: none; }
@@ -777,6 +849,10 @@
                 <h3>Fractional HR Support</h3>
                 <p>Experienced ER partnership for organizations that need HR depth without a full-time hire. I plug in where you need me — ongoing retainer, project-based, or case-by-case.</p>
             </div>
+        </div>
+
+        <div style="text-align:center;margin-top:48px;">
+            <a href="https://outlook.office.com/bookwithme/user/bf1245e5d3af4e46a57975553e099c41@Solaishr.com/meetingtype/iAAnwQgfrUabq0PZVBaW4Q2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-outline" style="font-size:16px;padding:14px 32px;">Book time with Cazzi Coleman: 30-Minute Intake Call →</a>
         </div>
     </div>
 </section>
@@ -1015,6 +1091,11 @@
             </div>
 
         </div>
+
+        <div style="text-align:center;margin-top:48px;">
+            <a href="https://outlook.office.com/bookwithme/user/bf1245e5d3af4e46a57975553e099c41@Solaishr.com/meetingtype/iAAnwQgfrUabq0PZVBaW4Q2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-primary" style="font-size:16px;padding:14px 32px;">Book an Intake Call →</a>
+            <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Free 30-minute call to figure out which session is the right fit.</p>
+        </div>
     </div>
 </section>
 
@@ -1052,7 +1133,7 @@
                             <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Conversation guide + prep templates</div>
                         </div>
                         <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
-                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$29</span>
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$35</span>
                             <!-- REPLACE href with your Gumroad link for the Prep Tool -->
                             <a href="https://cazzicoleman.gumroad.com/l/hzvcjs" target="_blank" class="btn btn-outline" style="padding:8px 16px;font-size:14px;">Get It</a>
                         </div>
@@ -1066,7 +1147,7 @@
                             <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Conversation prep + ongoing documentation</div>
                         </div>
                         <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
-                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--terra);">$59</span>
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--terra);">$68</span>
                             <!-- REPLACE href with your Gumroad link for the Prep Tool + Weekly Log bundle -->
                             <a href="https://cazzicoleman.gumroad.com/l/imgyrn" target="_blank" class="btn btn-gold" style="padding:8px 16px;font-size:14px;background:var(--terra);">Get It</a>
                         </div>
@@ -1080,7 +1161,7 @@
                             <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Every tool · Prep, record, log + updates</div>
                         </div>
                         <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
-                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$89</span>
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$110</span>
                             <!-- REPLACE href with your Gumroad link for the Complete System -->
                             <a href="https://cazzicoleman.gumroad.com/l/zvljaa" target="_blank" class="btn btn-primary" style="padding:8px 16px;font-size:14px;">Get It</a>
                         </div>
@@ -1089,6 +1170,19 @@
                 <div style="padding: 16px 32px 28px; font-size:13px; color:var(--text-muted); border-top: 1px solid var(--border); margin-top: 16px;">
                     Looking for individual tools? <a href="https://cazzicoleman.gumroad.com" target="_blank" style="color:var(--purple-mid);font-weight:600;">Browse all products on Gumroad →</a>
                 </div>
+            </div>
+
+            <!-- Benefits Sidebar -->
+            <div class="product-benefits">
+                <h4>What This Means for You and Your Team</h4>
+                <p class="product-benefits-sub">Built from real cases, not a template library.</p>
+                <ul>
+                    <li>Documentation that holds up if legal or an employee ever pushes back</li>
+                    <li>Employees walk away treated with clarity and dignity, not blindsided</li>
+                    <li>Every manager runs PIPs the same defensible way, not their own version</li>
+                    <li>Hours saved building a plan from scratch under deadline pressure</li>
+                    <li>One system that scales with you as the team grows</li>
+                </ul>
             </div>
 
         </div>
@@ -1173,34 +1267,42 @@
         <div class="contact-inner">
             <span class="eyebrow" style="color:var(--purple-light);font-weight:400;">Work With Me</span>
             <h2 class="section-title">Let's talk about what you're dealing with</h2>
-            <p class="section-sub">No intake form. No discovery deck. Tell me what's going on and we'll figure out together if I'm the right fit.</p>
 
-            <form id="workWithMeForm">
-                <div class="contact-options">
-                    <label class="contact-option">
-                        <input type="radio" name="engagementType" value="Fractional Retainer" required>
-                        <div class="contact-option-icon">🤝</div>
-                        <h4>Fractional Retainer</h4>
-                        <p>Ongoing ER partnership for teams that need depth</p>
-                    </label>
-                    <label class="contact-option">
-                        <input type="radio" name="engagementType" value="Consultation Call" required>
-                        <div class="contact-option-icon">📞</div>
-                        <h4>Consultation Call</h4>
-                        <p>45-min second opinion on a complex case</p>
-                    </label>
-                    <label class="contact-option">
-                        <input type="radio" name="engagementType" value="Leadership Coaching" required>
-                        <div class="contact-option-icon">🎯</div>
-                        <h4>Leadership Coaching</h4>
-                        <p>4-session series for one specific situation</p>
-                    </label>
+            <form id="riseForm" style="text-align:left;margin-top:40px;">
+                <div class="rise-form-grid">
+                    <div class="rise-field">
+                        <label for="riseName">Full Name</label>
+                        <input type="text" id="riseName" name="riseName" required>
+                    </div>
+                    <div class="rise-field">
+                        <label for="riseEmail">Email Address</label>
+                        <input type="email" id="riseEmail" name="riseEmail" required>
+                    </div>
+                    <div class="rise-field">
+                        <label for="risePhone">Phone Number</label>
+                        <input type="tel" id="risePhone" name="risePhone">
+                    </div>
+                    <div class="rise-field">
+                        <label for="riseService">Tell us what services you'd like to discuss:</label>
+                        <select id="riseService" name="riseService" required>
+                            <option value="">Select an option…</option>
+                            <option value="Consulting Services">Consulting Services</option>
+                            <option value="Paid Session Services">Paid Session Services</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="rise-field rise-field-full" id="riseDeeperWrap" style="display:none;">
+                        <label for="riseDeeper">Let's dive deeper:</label>
+                        <select id="riseDeeper" name="riseDeeper">
+                            <option value="">Select an option…</option>
+                        </select>
+                    </div>
                 </div>
 
-                <button type="submit" class="btn btn-gold" style="font-size:17px;padding:16px 40px;margin-top:24px;">
-                    Email Me Directly →
-                </button>
-                <p class="contact-form-note">Pick an option above and this opens a pre-filled email to ccoleman@solaishr.com — nothing is sent from this page.</p>
+                <div class="rise-form-submit-wrap">
+                    <button type="submit" class="btn btn-gold">Let's Get Started →</button>
+                    <p class="rise-form-note">This opens a pre-filled email with what you selected above — add any extra context that'll help me prep before we talk.</p>
+                </div>
             </form>
         </div>
     </div>
@@ -1257,17 +1359,62 @@
         });
     });
 
-    const workWithMeForm = document.getElementById('workWithMeForm');
-    if (workWithMeForm) {
-        workWithMeForm.addEventListener('submit', function (e) {
+    const riseForm = document.getElementById('riseForm');
+    const riseService = document.getElementById('riseService');
+    const riseDeeperWrap = document.getElementById('riseDeeperWrap');
+    const riseDeeper = document.getElementById('riseDeeper');
+
+    const riseDeeperOptions = {
+        'Consulting Services': [
+            'Employee Relations',
+            'HR Operations',
+            'Leadership Coaching',
+            'PIP Consultation',
+            'Compliance Support',
+            'Fractional HR Support'
+        ],
+        'Paid Session Services': [
+            'ER Consultation Call',
+            'HR Policy & Process Audit',
+            'HRIS Optimization',
+            'PIP & Succession Planning'
+        ]
+    };
+
+    if (riseService) {
+        riseService.addEventListener('change', function () {
+            const options = riseDeeperOptions[riseService.value];
+            if (options) {
+                riseDeeper.innerHTML = '<option value="">Select an option…</option>'
+                    + options.map(o => '<option value="' + o + '">' + o + '</option>').join('');
+                riseDeeperWrap.style.display = 'block';
+                riseDeeper.required = true;
+            } else {
+                riseDeeperWrap.style.display = 'none';
+                riseDeeper.required = false;
+                riseDeeper.value = '';
+            }
+        });
+    }
+
+    if (riseForm) {
+        riseForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const selected = workWithMeForm.querySelector('input[name="engagementType"]:checked');
-            if (!selected) return;
-            const engagementType = selected.value;
-            const subject = 'Inquiry: ' + engagementType;
+            const name = document.getElementById('riseName').value;
+            const email = document.getElementById('riseEmail').value;
+            const phone = document.getElementById('risePhone').value;
+            const service = riseService.value;
+            const deeper = riseDeeper.value;
+
+            const subject = 'New Inquiry - Solais HR Consulting';
             const bodyLines = [
-                'Interested in: ' + engagementType
+                'Name: ' + name,
+                'Email: ' + email,
+                'Phone: ' + (phone || 'Not provided'),
+                'Interested in: ' + service
             ];
+            if (deeper) bodyLines.push('Specifically: ' + deeper);
+
             const mailto = 'mailto:ccoleman@solaishr.com'
                 + '?subject=' + encodeURIComponent(subject)
                 + '&body=' + encodeURIComponent(bodyLines.join('\n'));
