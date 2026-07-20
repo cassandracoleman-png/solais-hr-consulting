@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solais HR Consulting | Cazzi Coleman — HR Consultant & Employee Relations Specialist</title>
+    <meta name="description" content="Solais HR Consulting: 10+ years in HR. Fractional ER support, PIP consultation, leadership coaching, compliance support, and HR toolkits for managers and people teams. Solais means light — bringing clarity, connection, and direction to human potential.">
+    <link rel="icon" type="image/png" href="solais-hr-consulting-favicon-wordmark.png">
+    <meta property="og:title" content="Solais HR Consulting | Cazzi Coleman">
+    <meta property="og:description" content="Solais means light. Bringing clarity, connection, and direction to human potential. Fractional HR & employee relations consulting.">
+    <meta property="og:image" content="solais-hr-consulting-og.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Solais HR Consulting brand palette (Deep Plum / Royal Violet / Lavender) */
+            --purple-deep:   #4B286D;
+            --purple-mid:    #6B46C1;
+            --purple-soft:   #879CED;
+            --purple-light:  #B9A9E3;
+            --purple-pale:   #EBE0FB;
+            --purple-bg:     #F8F5FD;
+            --gold:          #6B46C1;
+            --gold-light:    #EBE0FB;
+            --terra:         #4B286D;
+            --terra-mid:     #6B46C1;
+            --terra-light:   #EBE0FB;
+            --cream:         #FAFAF7;
+            --navy:          #2F2A36;
+            --text:          #2F2A36;
+            --text-muted:    #6D6478;
+            --surface:       #FFFFFF;
+            --border:        #E4DBF3;
+            --radius:        14px;
+            --max:           min(1360px, 92vw);
+            --font-body:     'Poppins', -apple-system, sans-serif;
+            --font-display:  'Fraunces', Georgia, serif;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--purple-bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(250,248,255,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 28px;
+        }
+        .nav-inner {
+            max-width: var(--max); margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 68px;
+        }
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 24px; font-weight: 700;
+            color: var(--purple-deep); text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 36px; align-items: center; }
+        .nav-links a {
+            text-decoration: none; font-size: 15px; font-weight: 500;
+            color: var(--text-muted); transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--purple-mid); }
+        .nav-cta {
+            background: var(--purple-mid) !important;
+            color: #fff !important;
+            padding: 9px 22px; border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--purple-deep) !important; }
+        .mobile-btn {
+            display: none; background: none; border: none; cursor: pointer;
+            flex-direction: column; gap: 5px; padding: 4px;
+        }
+        .mobile-btn span {
+            display: block; width: 22px; height: 2px;
+            background: var(--text); border-radius: 2px; transition: all 0.3s;
+        }
+
+        /* ── SHARED ── */
+        section { padding: 90px 28px; }
+        .inner { max-width: var(--max); margin: 0 auto; }
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--terra);
+            margin-bottom: 14px;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(30px, 3.5vw, 44px);
+            font-weight: 700; line-height: 1.2;
+            color: var(--purple-deep);
+            margin-bottom: 16px;
+        }
+        .section-sub {
+            font-size: 18px; color: var(--text-muted);
+            max-width: 580px; line-height: 1.75;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 30px; border-radius: 10px;
+            font-size: 16px; font-weight: 600;
+            text-decoration: none; cursor: pointer; border: none;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: var(--purple-mid); color: #fff; }
+        .btn-primary:hover { background: var(--purple-deep); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: var(--purple-mid);
+            border: 2px solid var(--purple-mid);
+        }
+        .btn-outline:hover { background: var(--purple-pale); }
+        .btn-gold { background: var(--gold); color: #fff; }
+        .btn-gold:hover { background: #A87820; transform: translateY(-1px); }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 150px 28px 90px;
+            background: linear-gradient(160deg, var(--purple-bg) 0%, #EDE5F8 50%, var(--purple-bg) 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; top: -100px; right: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(135,156,237,0.14) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; bottom: -80px; left: -80px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(107,70,193,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-bg-logo {
+            position: absolute; top: 50%; right: 4%;
+            transform: translateY(-50%);
+            width: 620px; max-width: 55vw; height: auto;
+            opacity: 0.10; pointer-events: none; z-index: 0;
+        }
+        .hero-inner {
+            max-width: var(--max); margin: 0 auto;
+            display: grid; grid-template-columns: 1fr;
+            gap: 60px; align-items: center;
+            position: relative; z-index: 1;
+        }
+        .hero-headline {
+            font-family: var(--font-display);
+            font-size: clamp(42px, 5.5vw, 68px);
+            line-height: 1.08; font-weight: 700;
+            color: var(--purple-deep); margin-bottom: 16px;
+        }
+        .hero-headline em {
+            color: var(--terra); font-style: italic;
+        }
+        .hero-pillars {
+            font-size: 13px; font-weight: 600; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+        .hero-pillars span { color: var(--terra); }
+        .hero-sub {
+            font-size: 19px; color: var(--text-muted);
+            line-height: 1.75; margin-bottom: 40px; max-width: 520px;
+        }
+        /* abstract circle graphic */
+        .hero-circle {
+            position: absolute; top: 40px; right: 480px;
+            width: 220px; height: 220px; border-radius: 50%;
+            border: 28px solid var(--terra-light);
+            opacity: 0.55; pointer-events: none;
+        }
+        .hero-circle-sm {
+            position: absolute; bottom: 60px; left: 60px;
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 14px solid var(--purple-light);
+            opacity: 0.35; pointer-events: none;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-stats {
+            display: flex; gap: 32px; margin-top: 48px; padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 36px; font-weight: 700;
+            color: var(--purple-mid); line-height: 1;
+        }
+        .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+        .hero-card {
+            background: var(--surface);
+            border-radius: 20px; padding: 36px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 40px rgba(75,40,109,0.10);
+        }
+        .hero-card-title {
+            font-family: var(--font-display);
+            font-size: 22px; font-weight: 700;
+            color: var(--purple-deep); margin-bottom: 20px;
+        }
+        .hero-service-pill {
+            display: inline-block;
+            background: var(--purple-pale); color: var(--purple-mid);
+            font-size: 13px; font-weight: 600;
+            padding: 6px 14px; border-radius: 20px;
+            margin: 4px;
+        }
+        .hero-divider {
+            border: none; border-top: 1px solid var(--border);
+            margin: 20px 0;
+        }
+        .hero-product-row {
+            display: flex; align-items: center; gap: 12px;
+            padding: 10px 0;
+        }
+        .hero-product-row + .hero-product-row {
+            border-top: 1px solid var(--border);
+        }
+        .product-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--gold); flex-shrink: 0;
+        }
+        .hero-product-row span { font-size: 15px; color: var(--text); font-weight: 500; }
+        .hero-product-row .price { margin-left: auto; font-size: 14px; color: var(--gold); font-weight: 600; }
+
+        /* ── PILLARS STRIP ── */
+        .pillars {
+            background: var(--navy);
+            padding: 28px 28px;
+        }
+        .pillars-inner {
+            max-width: var(--max); margin: 0 auto;
+            display: flex; align-items: center; justify-content: center;
+            gap: 0; flex-wrap: wrap;
+        }
+        .pillar-item {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 32px; position: relative;
+        }
+        .pillar-item:not(:last-child)::after {
+            content: '';
+            position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+            height: 24px; width: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+        .pillar-icon {
+            font-size: 18px; opacity: 0.9;
+        }
+        .pillar-label {
+            font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+            text-transform: uppercase; color: rgba(255,255,255,0.85);
+        }
+
+        /* ── REVIEW IMPROVE SUPPORT EXTEND BANNER ── */
+        .lle-banner {
+            background: var(--navy);
+            padding: 36px 28px;
+        }
+        .lle-inner {
+            max-width: var(--max); margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 20px;
+        }
+        .lle-words {
+            display: flex; align-items: center; flex-wrap: wrap; gap: 0;
+        }
+        .lle-word {
+            font-family: var(--font-display);
+            font-size: clamp(22px, 3vw, 32px); font-weight: 700;
+            color: #fff; letter-spacing: 1px;
+            padding: 0 28px; position: relative;
+        }
+        .lle-word:not(:last-child)::after {
+            content: '·';
+            position: absolute; right: -4px;
+            color: var(--terra); font-size: 28px;
+        }
+        .lle-tagline {
+            font-family: var(--font-display);
+            font-size: clamp(18px, 2vw, 24px);
+            font-style: italic; color: var(--terra-mid);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── SERVICES ── */
+        .services { background: var(--surface); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px; margin-top: 52px;
+        }
+        .service-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 32px;
+            background: var(--surface);
+            transition: all 0.25s; position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--purple-mid), var(--purple-soft));
+            opacity: 0; transition: opacity 0.25s;
+        }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(107,70,193,0.12); }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 52px; height: 52px;
+            background: var(--purple-pale); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; margin-bottom: 20px;
+        }
+        .service-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; color: var(--purple-deep); }
+        .service-card p { font-size: 15px; color: var(--text-muted); line-height: 1.65; }
+        .services-cta { text-align: center; margin-top: 48px; }
+
+        /* ── SESSIONS ── */
+        .sessions { background: var(--purple-pale); }
+        .sessions-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 32px; margin-top: 52px;
+        }
+        .session-card {
+            background: var(--surface);
+            border-radius: var(--radius); border: 1px solid var(--border);
+            overflow: hidden; transition: all 0.25s;
+        }
+        .session-card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(107,70,193,0.13); }
+        .session-header {
+            padding: 28px 32px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 16px;
+        }
+        .session-icon {
+            width: 52px; height: 52px; flex-shrink: 0;
+            background: var(--purple-pale); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+        }
+        .session-header h3 { font-size: 20px; font-weight: 600; color: var(--purple-deep); margin-bottom: 6px; }
+        .session-header p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+        .session-tiers { padding: 24px 32px; display: flex; flex-direction: column; gap: 14px; }
+        .session-tier {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 20px; border-radius: 10px;
+            border: 1.5px solid var(--border); background: var(--purple-bg);
+            transition: border-color 0.2s;
+        }
+        .session-tier:hover { border-color: var(--purple-soft); }
+        .session-tier.featured { border-color: var(--purple-mid); background: var(--purple-pale); }
+        .tier-label { font-size: 15px; font-weight: 600; color: var(--purple-deep); }
+        .tier-detail { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        .tier-right { display: flex; align-items: center; gap: 14px; }
+        .tier-price { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--purple-mid); }
+        .session-note {
+            padding: 0 32px 28px;
+            font-size: 13px; color: var(--text-muted); line-height: 1.6;
+        }
+
+        /* ── WHO ── */
+        .who { background: var(--purple-deep); }
+        .who .eyebrow { color: var(--purple-light); }
+        .who .section-title { color: #fff; }
+        .who .section-sub { color: rgba(255,255,255,0.65); }
+        .who-grid {
+            display: grid; grid-template-columns: repeat(5, 1fr);
+            gap: 16px; margin-top: 52px;
+        }
+        .who-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius); padding: 28px 20px;
+            text-align: center; transition: all 0.25s;
+        }
+        .who-card:hover { background: rgba(255,255,255,0.12); }
+        .who-icon { font-size: 28px; margin-bottom: 12px; }
+        .who-card h3 { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+        .who-card p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .who-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: #fff;
+            border: 2px solid rgba(255,255,255,0.4);
+            padding: 14px 32px; border-radius: 10px;
+            font-size: 16px; font-weight: 600; text-decoration: none;
+            transition: all 0.2s;
+        }
+        .who-cta:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+        /* ── SECTION DIVIDER ── */
+        .section-divider {
+            background: var(--purple-pale);
+            padding: 0 28px 56px;
+        }
+        .section-divider-inner {
+            max-width: var(--max); margin: 0 auto;
+            position: relative;
+            display: flex; align-items: center;
+            height: 8px;
+        }
+        .section-divider-line {
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--purple-mid) 50%, transparent 100%);
+        }
+        .section-divider-dot {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--purple-mid);
+        }
+
+        /* ── PRODUCTS ── */
+        .products { background: var(--purple-pale); }
+        .products-grid {
+            display: grid; grid-template-columns: 1fr 440px;
+            max-width: 1040px; margin: 52px auto 0;
+            gap: 40px; align-items: start;
+        }
+        .product-benefits {
+            padding: 32px 8px;
+        }
+        .product-benefits h4 {
+            font-family: var(--font-display);
+            font-size: 19px; font-weight: 700;
+            color: var(--purple-deep); margin-bottom: 6px;
+        }
+        .product-benefits .product-benefits-sub {
+            font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;
+        }
+        .product-benefits ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        .product-benefits li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: var(--text); line-height: 1.6;
+        }
+        .product-benefits li::before {
+            content: "✦"; color: var(--purple-mid);
+            font-size: 12px; margin-top: 4px; flex-shrink: 0;
+        }
+        .product-card {
+            background: var(--surface);
+            border-radius: var(--radius); border: 1px solid var(--border);
+            overflow: hidden; transition: all 0.25s;
+            display: flex; flex-direction: column;
+        }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(107,70,193,0.14); }
+        .product-header {
+            padding: 32px 32px 24px;
+            background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid));
+            position: relative;
+        }
+        .product-header.gold-header {
+            background: linear-gradient(135deg, #2F1A47, var(--gold));
+        }
+        .product-header.indigo-header {
+            background: linear-gradient(135deg, #1A0F4E, #3D2B8E);
+        }
+        .product-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: #fff; font-size: 11px; font-weight: 600;
+            padding: 3px 12px; border-radius: 20px;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .product-header h3 {
+            font-family: var(--font-display);
+            font-size: 24px; font-weight: 700; color: #fff;
+            margin-bottom: 6px;
+        }
+        .product-header p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+        .product-body { padding: 28px 32px; flex: 1; }
+        .product-features { list-style: none; margin-bottom: 24px; }
+        .product-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            padding: 8px 0; font-size: 15px; color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+        }
+        .product-features li:last-child { border-bottom: none; }
+        .product-features li::before {
+            content: "✦"; color: var(--purple-soft);
+            font-size: 11px; margin-top: 4px; flex-shrink: 0;
+        }
+        .product-footer {
+            padding: 20px 32px 28px;
+            display: flex; align-items: center; justify-content: space-between;
+            border-top: 1px solid var(--border);
+        }
+        .product-price {
+            font-family: var(--font-display);
+            font-size: 32px; font-weight: 700; color: var(--purple-deep);
+        }
+        .product-price span { font-size: 14px; color: var(--text-muted); font-family: var(--font-body); font-weight: 400; }
+        .coming-soon-tag {
+            display: inline-block;
+            background: var(--gold-light); color: var(--gold);
+            font-size: 12px; font-weight: 600; padding: 3px 10px;
+            border-radius: 6px; margin-bottom: 8px;
+        }
+
+        /* ── APPROACH ── */
+        .approach { background: var(--surface); }
+        .approach-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 60px; align-items: center; margin-top: 52px;
+        }
+        .approach-visual {
+            background: var(--purple-pale);
+            border-radius: 20px; padding: 40px;
+            position: relative;
+        }
+        .chakra-row {
+            display: flex; align-items: center; gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .chakra-row:last-child { border-bottom: none; }
+        .chakra-dot {
+            width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+        }
+        .chakra-row h4 { font-size: 16px; font-weight: 600; color: var(--purple-deep); }
+        .chakra-row p { font-size: 14px; color: var(--text-muted); margin-top: 2px; }
+        .approach-text p {
+            font-size: 17px; color: var(--text); line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .approach-text p:last-child { margin-bottom: 0; }
+        .credential-row {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+        }
+        .cred-tag {
+            background: var(--purple-pale); color: var(--purple-mid);
+            font-size: 12px; font-weight: 600; padding: 5px 14px;
+            border-radius: 20px;
+        }
+
+        /* ── ABOUT ── */
+        .about { background: var(--purple-pale); }
+        .about-grid {
+            display: grid; grid-template-columns: 360px 1fr;
+            gap: 60px; align-items: start; margin-top: 52px;
+        }
+        .about-photo-wrap {
+            position: sticky; top: 88px;
+        }
+        .about-photo {
+            width: 100%; aspect-ratio: 4/5;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(160deg, var(--purple-pale), var(--purple-light));
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--border);
+            font-size: 80px;
+        }
+        /*
+         * TO ADD YOUR HEADSHOT:
+         * Replace the emoji div below with:
+         * <img src="YOUR-PHOTO-FILENAME.jpg" alt="Cazzi Coleman" style="width:100%;height:100%;object-fit:cover;">
+         */
+        .about-photo-placeholder { font-size: 90px; }
+        .about-social { display: flex; gap: 12px; margin-top: 20px; }
+        .about-social a {
+            flex: 1; text-align: center;
+            font-size: 14px; font-weight: 600;
+            color: var(--purple-mid); text-decoration: none;
+            padding: 10px; border-radius: 8px;
+            border: 1.5px solid var(--purple-mid);
+            transition: all 0.2s;
+        }
+        .about-social a:hover { background: var(--purple-mid); color: #fff; }
+        .about-text p {
+            font-size: 17px; line-height: 1.85;
+            color: var(--text); margin-bottom: 20px;
+        }
+        .about-text p:last-child { margin-bottom: 0; }
+        .tools-label {
+            font-size: 12px; font-weight: 600; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--text-muted);
+            margin-top: 32px; margin-bottom: 12px;
+        }
+        .tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tool-tag {
+            background: var(--surface); color: var(--text-muted);
+            font-size: 12px; font-weight: 500; padding: 4px 12px;
+            border-radius: 6px; border: 1px solid var(--border);
+        }
+
+        /* ── CONTACT ── */
+        .contact {
+            background: linear-gradient(160deg, var(--purple-deep) 0%, #3A2166 100%);
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .contact::before {
+            content: '';
+            position: absolute; top: -150px; left: 50%; transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(107,70,193,0.18) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+        .contact-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+        .contact .section-title { color: #fff; }
+        .contact .section-sub { color: rgba(255,255,255,0.65); margin: 0 auto 40px; }
+        .contact-options {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 16px; margin-bottom: 40px;
+        }
+        .contact-option {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius); padding: 24px 16px;
+            cursor: pointer; text-align: left; transition: all 0.2s;
+            display: block;
+        }
+        .contact-option input[type="radio"] {
+            position: absolute; opacity: 0; pointer-events: none;
+        }
+        .contact-option:hover { background: rgba(255,255,255,0.12); }
+        .contact-option:has(input:checked) {
+            background: rgba(255,255,255,0.16);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 1px var(--gold);
+        }
+        .contact-option-icon { font-size: 28px; margin-bottom: 10px; }
+        .contact-option h4 { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+        .contact-option p { font-size: 13px; color: rgba(255,255,255,0.6); }
+        .contact-message {
+            width: 100%; margin-top: 24px; margin-bottom: 24px;
+            background: rgba(255,255,255,0.95); color: var(--text);
+            border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius);
+            padding: 14px 16px; font-family: var(--font-body); font-size: 15px;
+            resize: vertical; min-height: 90px;
+        }
+        .contact-message::placeholder { color: var(--text-muted); }
+        .contact-form-note {
+            font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 8px;
+        }
+
+        /* ── ARE YOU READY TO RISE FORM ── */
+        .rise-form-section { background: var(--surface); }
+        .rise-form-inner { max-width: 780px; margin: 0 auto; }
+        .rise-form-title {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 3.2vw, 36px); font-weight: 700;
+            color: var(--navy); text-align: center; margin-bottom: 52px;
+        }
+        .rise-form-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 30px 48px; margin-bottom: 12px;
+        }
+        .rise-field label {
+            display: block; font-size: 14px; color: var(--purple-mid);
+            margin-bottom: 12px;
+        }
+        .rise-field input, .rise-field select {
+            width: 100%; border: none; border-bottom: 1.5px solid var(--navy);
+            background: transparent; border-radius: 0;
+            padding: 4px 2px 10px; font-family: var(--font-body);
+            font-size: 15px; color: var(--text); appearance: auto;
+        }
+        .rise-field input:focus, .rise-field select:focus {
+            outline: none; border-bottom-color: var(--purple-mid);
+        }
+        .rise-field-full { grid-column: 1 / -1; }
+        .rise-form-submit-wrap { text-align: center; margin-top: 36px; }
+        .rise-form-submit-wrap .btn { width: 100%; max-width: 560px; justify-content: center; }
+        .rise-form-note { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 16px; }
+
+        /* Rise form on the dark Contact section needs light text/borders */
+        .contact .rise-field label { color: rgba(255,255,255,0.75); }
+        .contact .rise-field input, .contact .rise-field select {
+            color: #fff; border-bottom-color: rgba(255,255,255,0.35);
+        }
+        .contact .rise-field input::placeholder { color: rgba(255,255,255,0.4); }
+        .contact .rise-field select option { color: var(--text); }
+        .contact .rise-field input:focus, .contact .rise-field select:focus {
+            border-bottom-color: var(--gold);
+        }
+        .contact .rise-form-note { color: rgba(255,255,255,0.55); }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #1E1330; color: rgba(255,255,255,0.5);
+            padding: 40px 28px; text-align: center; font-size: 14px;
+        }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        footer a:hover { color: #fff; }
+        footer .footer-inner { max-width: var(--max); margin: 0 auto; }
+        footer .footer-logo {
+            font-family: var(--font-display);
+            font-size: 22px; color: #fff; margin-bottom: 16px; display: block;
+        }
+
+        /* ── MOBILE ── */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-card { display: none; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .sessions-grid { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
+            .who-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+            .approach-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-photo-wrap { position: static; }
+            .about-photo { max-width: 280px; margin: 0 auto; }
+            .contact-options { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
+            .rise-form-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex; flex-direction: column; gap: 16px;
+                position: absolute; top: 68px; left: 0; right: 0;
+                background: var(--purple-bg); padding: 24px 28px;
+                border-bottom: 1px solid var(--border);
+            }
+            .mobile-btn { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .who-grid { grid-template-columns: 1fr 1fr; }
+            section { padding: 70px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-logo" style="display:flex;align-items:center;">
+            <img src="logo-icon-transparent.png" alt="Solais HR Consulting" style="height:56px;width:auto;display:block;">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#services">Services</a>
+            <a href="#sessions">Sessions</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="nav-cta">Let's Connect</a>
+        </div>
+        <button class="mobile-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-circle"></div>
+    <div class="hero-circle-sm"></div>
+    <img src="logo-icon-transparent.png" alt="" class="hero-bg-logo">
+    <div class="hero-inner">
+        <div>
+            <span class="eyebrow">Solais HR Consulting</span>
+            <h1 class="hero-headline">People First.<br><em>Purpose Driven.</em></h1>
+            <p class="hero-pillars">Building Strong Cultures. Empowering People. <span>Driving Success.</span></p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PILLARS STRIP
+═══════════════════════════════════════ -->
+<div class="pillars">
+    <div class="pillars-inner">
+        <div class="pillar-item">
+            <span class="pillar-icon">🎯</span>
+            <span class="pillar-label">Talent Management</span>
+        </div>
+        <div class="pillar-item">
+            <span class="pillar-icon">⚖️</span>
+            <span class="pillar-label">Employee Relations</span>
+        </div>
+        <div class="pillar-item">
+            <span class="pillar-icon">🌱</span>
+            <span class="pillar-label">Culture & Engagement</span>
+        </div>
+        <div class="pillar-item">
+            <span class="pillar-icon">🧭</span>
+            <span class="pillar-label">People Strategy</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════ -->
+<section class="services" id="services">
+    <div class="inner">
+        <span class="eyebrow">Consulting Services</span>
+        <h2 class="section-title">What we do</h2>
+        <p style="font-family:var(--font-display);font-style:italic;font-size:18px;color:var(--purple-mid);margin-bottom:16px;">
+            "Solais means light. Bringing clarity, connection, and direction to human potential."
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚖️</div>
+                <h3>Employee Relations</h3>
+                <p>Complex ER cases, conflict resolution, and documentation that holds up under scrutiny. I've handled the cases most HR generalists dread — and built the paper trail that protects everyone.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>HR Operations</h3>
+                <p>Process design, compliance infrastructure, policy development, and HR systems setup. Whether you're building from scratch or cleaning up what's there, I can get it running right.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🗣️</div>
+                <h3>Leadership Coaching</h3>
+                <p>Helping managers have the hard conversations and make defensible decisions on performance. The goal isn't just to protect the company — it's to turn managers into leaders their teams actually trust.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>PIP Consultation</h3>
+                <p>Legally sound PIPs built around fairness, clarity, and dignity for the employee. Rooted in the RISE<sup>™</sup> Framework — Review, Improve, Support, Extend — because a plan no one believes in doesn't work.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📜</div>
+                <h3>Compliance Support</h3>
+                <p>Interactive process documentation and reasonable accommodation guidance that meets legal requirements without losing the human element. Done right, the first time.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>Fractional HR Support</h3>
+                <p>Experienced ER partnership for organizations that need HR depth without a full-time hire. I plug in where you need me — ongoing retainer, project-based, or case-by-case.</p>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:48px;">
+            <a href="https://outlook.office.com/bookwithme/user/bf1245e5d3af4e46a57975553e099c41@Solaishr.com/meetingtype/iAAnwQgfrUabq0PZVBaW4Q2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-outline" style="font-size:16px;padding:14px 32px;">Book time with Cazzi Coleman: 30-Minute Intake Call →</a>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider" style="background:var(--surface);">
+    <div class="section-divider-inner">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-dot"></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     THE APPROACH
+═══════════════════════════════════════ -->
+<section class="approach">
+    <div class="inner">
+        <span class="eyebrow">The Approach</span>
+        <h2 class="section-title">People strategy isn't just policy</h2>
+
+        <div class="approach-grid">
+            <div class="approach-visual">
+                <div style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--purple-deep);margin-bottom:24px;">The RISE<sup>™</sup> Framework</div>
+                <div class="chakra-row">
+                    <div class="chakra-dot" style="background:#4B286D;"></div>
+                    <div>
+                        <h4>Review</h4>
+                        <p>Get the full picture before acting. Performance history, context, root cause — not just the surface complaint.</p>
+                    </div>
+                </div>
+                <div class="chakra-row">
+                    <div class="chakra-dot" style="background:#6B46C1;"></div>
+                    <div>
+                        <h4>Improve</h4>
+                        <p>Turn the review into a clear, specific plan. Concrete expectations, not vague feedback.</p>
+                    </div>
+                </div>
+                <div class="chakra-row">
+                    <div class="chakra-dot" style="background:#879CED;"></div>
+                    <div>
+                        <h4>Support</h4>
+                        <p>Show up as a partner, not a warden. Give the employee what they actually need to succeed.</p>
+                    </div>
+                </div>
+                <div class="chakra-row">
+                    <div class="chakra-dot" style="background:#B9A9E3;"></div>
+                    <div>
+                        <h4>Extend</h4>
+                        <p>Follow through past the plan's end date. Document progress, adjust in real time, and see it through to a real outcome.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="approach-text">
+                <p>We start every engagement the same way: figure out what's actually going on before we recommend anything. That means talking to the people involved, not just reading the file — because the paper trail never tells the whole story, and the part it misses is usually what decides whether a plan works or falls apart.</p>
+
+                <p>We write everything so it can hold up later — in front of legal, in front of a regulator, in front of the employee it's about. That's the standard: clear enough to defend, human enough to actually help. Anything less isn't worth building.</p>
+
+                <p>We use behavioral assessment frameworks — including DiSC and predictive behavioral principles — not to label people, but to help managers understand what motivates their team and how to meet individuals where they actually are. That's what separates coaching that sticks from coaching that gets filed away.</p>
+
+                <div class="credential-row">
+                    <span class="cred-tag">10+ Years ER</span>
+                    <span class="cred-tag">DiSC Certified</span>
+                    <span class="cred-tag">PI Certified</span>
+                    <span class="cred-tag">Compliance Support</span>
+                    <span class="cred-tag">Leadership Development</span>
+                    <span class="cred-tag">Fractional HR</span>
+                    <span class="cred-tag">Performance Management</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     WHO I WORK WITH
+═══════════════════════════════════════ -->
+<section class="who">
+    <div class="inner">
+        <span class="eyebrow">Who I work with</span>
+        <h2 class="section-title">You might recognize yourself here</h2>
+        <p class="section-sub">I work best when the situation is complex and the stakes are real.</p>
+
+        <div class="who-grid">
+            <div class="who-card">
+                <div class="who-icon">🎯</div>
+                <h3>HR Departments of One</h3>
+                <p>ER backup on complex cases, second opinions, and documentation review before things escalate.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">👤</div>
+                <h3>People Managers</h3>
+                <p>Coaching through PIPs, terminations, accommodations, and the conversations they've been putting off.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">🚀</div>
+                <h3>Scaling Startups</h3>
+                <p>Building HR infrastructure for companies adding headcount faster than their policies can keep up.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">🏢</div>
+                <h3>Mid-Size Organizations</h3>
+                <p>Modernizing ER practices, updating documentation standards, and working through backlog cases.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">⚖️</div>
+                <h3>Legal & Compliance Teams</h3>
+                <p>HR-side context and defensible documentation on matters that could head toward litigation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     BOOKABLE SESSIONS
+═══════════════════════════════════════ -->
+<section class="sessions" id="sessions">
+    <div class="inner">
+        <span class="eyebrow">Paid Sessions</span>
+        <h2 class="section-title">Get expert eyes on your situation</h2>
+        <p class="section-sub">No retainer required. Book a session when you need a second opinion, a full audit, or a clear path forward.</p>
+
+        <div class="sessions-grid">
+
+            <!-- ER Consultation Calls -->
+            <div class="session-card">
+                <div class="session-header">
+                    <div class="session-icon">📞</div>
+                    <div>
+                        <h3>ER Consultation Call</h3>
+                        <p>A focused, confidential session to work through a complex employee relations situation before you act. Ideal for HR professionals, people managers, and business owners who need an experienced second opinion.</p>
+                    </div>
+                </div>
+                <div class="session-tiers">
+                    <div class="session-tier">
+                        <div>
+                            <div class="tier-label">Case Consultation</div>
+                            <div class="tier-detail">45 minutes · One specific ER situation</div>
+                        </div>
+                    </div>
+                    <div class="session-tier featured">
+                        <div>
+                            <div class="tier-label">Deep Dive</div>
+                            <div class="tier-detail">90 minutes · Complex case + recommendations</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="session-note">
+                    Comes with a written summary of key risks, recommended next steps, and documentation guidance sent within 24 hours.
+                </div>
+            </div>
+
+            <!-- HR Policy & Process Audit -->
+            <div class="session-card">
+                <div class="session-header">
+                    <div class="session-icon">🔍</div>
+                    <div>
+                        <h3>HR Policy & Process Audit</h3>
+                        <p>A structured review of your ER documentation — termination checklists, accommodation processes, investigation templates — delivered as a written report with prioritized fixes.</p>
+                    </div>
+                </div>
+                <div class="session-tiers">
+                    <div class="session-tier">
+                        <div>
+                            <div class="tier-label">Core Audit</div>
+                            <div class="tier-detail">2–3 hours · Up to 5 documents reviewed</div>
+                        </div>
+                    </div>
+                    <div class="session-tier featured">
+                        <div>
+                            <div class="tier-label">Full Audit</div>
+                            <div class="tier-detail">Comprehensive review + priority action plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="session-note">
+                    Delivers a written findings report with a clear breakdown of what's missing, what's at legal risk, and what to fix first — within 5 business days.
+                </div>
+            </div>
+
+            <!-- HRIS Optimization -->
+            <div class="session-card">
+                <div class="session-header">
+                    <div class="session-icon">⚙️</div>
+                    <div>
+                        <h3>HRIS Optimization</h3>
+                        <p>Most HRIS audits stop at the system — permissions, workflows, data hygiene. I go further: I look at how your people actually use it day to day, where adoption breaks down, and where the technology and the humans running it have stopped talking to each other.</p>
+                    </div>
+                </div>
+                <div class="session-tiers">
+                    <div class="session-tier">
+                        <div>
+                            <div class="tier-label">System + Usage Review</div>
+                            <div class="tier-detail">2–3 hours · Configuration check + a first look at real adoption gaps</div>
+                        </div>
+                    </div>
+                    <div class="session-tier featured">
+                        <div>
+                            <div class="tier-label">Full Optimization</div>
+                            <div class="tier-detail">Comprehensive system audit + human-adoption roadmap</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="session-note">
+                    Delivers a written findings report that separates what's broken in the system from what's breaking down in how your team actually uses it — with a prioritized fix list for both, within 5 business days.
+                </div>
+            </div>
+
+            <!-- PIP & Succession Planning -->
+            <div class="session-card">
+                <div class="session-header">
+                    <div class="session-icon">📈</div>
+                    <div>
+                        <h3>PIP &amp; Succession Planning</h3>
+                        <p>Support for both ends of the performance spectrum — a legally sound PIP for someone struggling, or a development and succession plan for someone you don't want to lose.</p>
+                    </div>
+                </div>
+                <div class="session-tiers">
+                    <div class="session-tier">
+                        <div>
+                            <div class="tier-label">PIP Build Session</div>
+                            <div class="tier-detail">90 minutes · One RISE<sup>™</sup>-based PIP, ready to deliver</div>
+                        </div>
+                    </div>
+                    <div class="session-tier featured">
+                        <div>
+                            <div class="tier-label">Succession &amp; Development Session</div>
+                            <div class="tier-detail">90 minutes · Development plan + succession map for one role or employee</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="session-note">
+                    Delivers a written, ready-to-use document — either a complete PIP or a development/succession plan — within 3 business days.
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:48px;">
+            <a href="https://outlook.office.com/bookwithme/user/bf1245e5d3af4e46a57975553e099c41@Solaishr.com/meetingtype/iAAnwQgfrUabq0PZVBaW4Q2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-primary" style="font-size:16px;padding:14px 32px;">Book an Intake Call →</a>
+            <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Free 30-minute call to figure out which session is the right fit.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider">
+    <div class="section-divider-inner">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-dot"></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PRODUCTS
+═══════════════════════════════════════ -->
+<section class="products" id="products">
+    <div class="inner">
+        <span class="eyebrow">Digital Toolkits</span>
+        <h2 class="section-title">HR tools built from the inside out</h2>
+        <p class="section-sub">Not generic templates. Systems built by someone who's used them in the room.</p>
+
+        <div class="products-grid">
+
+            <!-- Product 1: RISE PIP System -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-badge">Available Now</div>
+                    <h3>RISE<sup>™</sup> PIP System</h3>
+                    <p>A complete toolkit for HR teams and managers running Performance Improvement Plans with dignity and legal defensibility. Pick the tier that fits where you are.</p>
+                </div>
+                <div class="product-body" style="padding-bottom: 8px;">
+                    <!-- Tier 1: Start Here -->
+                    <div style="display:flex; align-items:center; justify-content:space-between; padding: 16px 20px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--purple-bg); margin-bottom: 12px;">
+                        <div>
+                            <div style="font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Start Here</div>
+                            <div style="font-size:15px;font-weight:600;color:var(--purple-deep);">PIP Prep Tool</div>
+                            <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Conversation guide + prep templates</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$35</span>
+                            <!-- REPLACE href with your Gumroad link for the Prep Tool -->
+                            <a href="https://cazzicoleman.gumroad.com/l/hzvcjs" target="_blank" class="btn btn-outline" style="padding:8px 16px;font-size:14px;">Get It</a>
+                        </div>
+                    </div>
+                    <!-- Tier 2: Most Popular -->
+                    <div style="display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 10px; border: 2px solid var(--terra); background: var(--terra-light); margin-bottom: 12px; position:relative;">
+                        <div style="position:absolute;top:-11px;left:16px;background:var(--terra);color:#fff;font-size:11px;font-weight:600;padding:3px 14px;border-radius:20px;letter-spacing:0.5px;">MOST POPULAR</div>
+                        <div>
+                            <div style="font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--terra);margin-bottom:4px;">Better</div>
+                            <div style="font-size:15px;font-weight:600;color:var(--purple-deep);">Prep Tool + Weekly Check-In Log</div>
+                            <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Conversation prep + ongoing documentation</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--terra);">$68</span>
+                            <!-- REPLACE href with your Gumroad link for the Prep Tool + Weekly Log bundle -->
+                            <a href="https://cazzicoleman.gumroad.com/l/imgyrn" target="_blank" class="btn btn-gold" style="padding:8px 16px;font-size:14px;background:var(--terra);">Get It</a>
+                        </div>
+                    </div>
+                    <!-- Tier 3: Full System -->
+                    <div style="display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; border-radius: 10px; border: 2px solid var(--purple-mid); background: var(--purple-pale); position:relative;">
+                        <div style="position:absolute;top:-11px;left:16px;background:var(--purple-mid);color:#fff;font-size:11px;font-weight:600;padding:3px 14px;border-radius:20px;letter-spacing:0.5px;">BEST VALUE</div>
+                        <div>
+                            <div style="font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--purple-mid);margin-bottom:4px;">Full System</div>
+                            <div style="font-size:15px;font-weight:600;color:var(--purple-deep);">Complete RISE<sup>™</sup> PIP System</div>
+                            <div style="font-size:13px;color:var(--text-muted);margin-top:2px;">Every tool · Prep, record, log + updates</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+                            <span style="font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--purple-mid);">$110</span>
+                            <!-- REPLACE href with your Gumroad link for the Complete System -->
+                            <a href="https://cazzicoleman.gumroad.com/l/zvljaa" target="_blank" class="btn btn-primary" style="padding:8px 16px;font-size:14px;">Get It</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 16px 32px 28px; font-size:13px; color:var(--text-muted); border-top: 1px solid var(--border); margin-top: 16px;">
+                    Looking for individual tools? <a href="https://cazzicoleman.gumroad.com" target="_blank" style="color:var(--purple-mid);font-weight:600;">Browse all products on Gumroad →</a>
+                </div>
+            </div>
+
+            <!-- Benefits Sidebar -->
+            <div class="product-benefits">
+                <h4>What This Means for You and Your Team</h4>
+                <p class="product-benefits-sub">Built from real cases, not a template library.</p>
+                <ul>
+                    <li>Documentation that holds up if legal or an employee ever pushes back</li>
+                    <li>Employees walk away treated with clarity and dignity, not blindsided</li>
+                    <li>Every manager runs PIPs the same defensible way, not their own version</li>
+                    <li>Hours saved building a plan from scratch under deadline pressure</li>
+                    <li>One system that scales with you as the team grows</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="section-divider">
+    <div class="section-divider-inner">
+        <div class="section-divider-line"></div>
+        <div class="section-divider-dot"></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════ -->
+<section class="about" id="about">
+    <div class="inner">
+        <h2 class="section-title">I'm a problem solver first</h2>
+
+        <div class="about-grid">
+            <div class="about-photo-wrap">
+                <div class="about-photo">
+                    <img src="Profile Image - Upper Body.png" alt="Cazzi Coleman" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="about-social">
+                    <a href="https://linkedin.com/in/cazzicoleman" target="_blank">Connect on LinkedIn →</a>
+                </div>
+                <div class="tools-label">Systems I Work In</div>
+                <div class="tools-row">
+                    <span class="tool-tag">Workday HCM</span>
+                    <span class="tool-tag">Rippling</span>
+                    <span class="tool-tag">ADP Workforce Now</span>
+                    <span class="tool-tag">Lattice</span>
+                    <span class="tool-tag">Lever</span>
+                    <span class="tool-tag">ClickUp</span>
+                    <span class="tool-tag">Gumroad</span>
+                    <span class="tool-tag">MS 365</span>
+                    <span class="tool-tag">Google Workspace</span>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <div style="margin-bottom:24px;">
+                    <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--purple-deep);">Cazzi Coleman</div>
+                    <div style="font-size:16px;font-weight:600;color:var(--purple-mid);margin-top:4px;">Founder &amp; HR Consultant, Solais HR Consulting</div>
+                </div>
+
+                <p>I'm Cazzi Coleman, founder of Solais HR Consulting — an HR Consultant and Employee Relations Specialist with over a decade of experience navigating the situations that keep HR leaders and people managers up at night.</p>
+
+                <p>I have a skill and a passion for seeing change as opportunity. When there's unpredictability and ambiguity, I can step back, take in all the factors, and build a clear path forward out of what could look like chaos. That instinct is what drew me to HR and what keeps me here.</p>
+
+                <p>I've spent most of my career as a department of one — which means I've had to handle complex terminations, ADA conversations, performance processes, ER investigations, and leadership coaching without the luxury of a team to hand things off to. That shaped how I approach every engagement: thorough, practical, and built to hold up under scrutiny.</p>
+
+                <p>The approach is rooted in the belief that good HR doesn't choose between protecting the company and protecting the person. Done right, it does both. The RISE<sup>™</sup> Framework — Review, Improve, Support, Extend — is the clearest expression of that philosophy, and it's behind everything I build and every engagement I take on.</p>
+
+                <p>I work with HR Directors who need a specialist on complex ER cases, people managers who need coaching through difficult conversations, and scaling companies that need HR depth without a full-time hire. If you're dealing with something messy, I'm comfortable there.</p>
+
+                <div class="credential-row">
+                    <span class="cred-tag">10+ Years ER</span>
+                    <span class="cred-tag">DiSC Certified</span>
+                    <span class="cred-tag">PI Certified</span>
+                    <span class="cred-tag">Compliance Support</span>
+                    <span class="cred-tag">Leadership Development</span>
+                    <span class="cred-tag">Fractional HR</span>
+                    <span class="cred-tag">Performance Management</span>
+                    <span class="cred-tag">MBA, Southern New Hampshire University</span>
+                    <span class="cred-tag">B.S., Family &amp; Consumer Sciences</span>
+                    <span class="cred-tag">Workday HCM Certified</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+<section class="contact" id="contact">
+    <div class="inner">
+        <div class="contact-inner">
+            <span class="eyebrow" style="color:var(--purple-light);font-weight:400;">Work With Me</span>
+            <h2 class="section-title">Let's talk about what you're dealing with</h2>
+
+            <form id="riseForm" style="text-align:left;margin-top:40px;">
+                <div class="rise-form-grid">
+                    <div class="rise-field">
+                        <label for="riseName">Full Name</label>
+                        <input type="text" id="riseName" name="riseName" required>
+                    </div>
+                    <div class="rise-field">
+                        <label for="riseEmail">Email Address</label>
+                        <input type="email" id="riseEmail" name="riseEmail" required>
+                    </div>
+                    <div class="rise-field">
+                        <label for="risePhone">Phone Number</label>
+                        <input type="tel" id="risePhone" name="risePhone">
+                    </div>
+                    <div class="rise-field">
+                        <label for="riseService">Tell us what services you'd like to discuss:</label>
+                        <select id="riseService" name="riseService" required>
+                            <option value="">Select an option…</option>
+                            <option value="Consulting Services">Consulting Services</option>
+                            <option value="Paid Session Services">Paid Session Services</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="rise-field rise-field-full" id="riseDeeperWrap" style="display:none;">
+                        <label for="riseDeeper">Let's dive deeper:</label>
+                        <select id="riseDeeper" name="riseDeeper">
+                            <option value="">Select an option…</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="rise-form-submit-wrap">
+                    <button type="submit" class="btn btn-gold">Let's Get Started →</button>
+                    <p class="rise-form-note">This opens a pre-filled email with what you selected above — add any extra context that'll help me prep before we talk.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     REVIEW. IMPROVE. SUPPORT. EXTEND. BANNER
+═══════════════════════════════════════ -->
+<div class="lle-banner">
+    <div class="lle-inner">
+        <div class="lle-words">
+            <span class="lle-word">Review</span>
+            <span class="lle-word">Improve</span>
+            <span class="lle-word">Support</span>
+            <span class="lle-word">Extend</span>
+        </div>
+        <div class="lle-tagline">Stronger Teams. Thriving Workplaces.</div>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-logo">Solais HR Consulting</span>
+        <p>Cazzi Coleman &nbsp;·&nbsp; HR Consultant &amp; Employee Relations Specialist &nbsp;·&nbsp; RISE<sup>™</sup> Framework Creator</p>
+        <p style="margin-top:8px;font-style:italic;">Solais means light. Bringing clarity, connection, and direction to human potential.</p>
+        <p style="margin-top:12px;">
+            <a href="#services">Services</a> &nbsp;·&nbsp;
+            <a href="#products">Products</a> &nbsp;·&nbsp;
+            <a href="https://linkedin.com/in/cazzicoleman" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+            <a href="mailto:ccoleman@solaishr.com">Email</a>
+        </p>
+        <p style="margin-top:20px;font-size:12px;">© 2026 Solais HR Consulting. People First. Purpose Driven.</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const href = a.getAttribute('href');
+            if (href === '#') return;
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 80;
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+                document.getElementById('navLinks').classList.remove('open');
+            }
+        });
+    });
+
+    const riseForm = document.getElementById('riseForm');
+    const riseService = document.getElementById('riseService');
+    const riseDeeperWrap = document.getElementById('riseDeeperWrap');
+    const riseDeeper = document.getElementById('riseDeeper');
+
+    const riseDeeperOptions = {
+        'Consulting Services': [
+            'Employee Relations',
+            'HR Operations',
+            'Leadership Coaching',
+            'PIP Consultation',
+            'Compliance Support',
+            'Fractional HR Support'
+        ],
+        'Paid Session Services': [
+            'ER Consultation Call',
+            'HR Policy & Process Audit',
+            'HRIS Optimization',
+            'PIP & Succession Planning'
+        ]
+    };
+
+    if (riseService) {
+        riseService.addEventListener('change', function () {
+            const options = riseDeeperOptions[riseService.value];
+            if (options) {
+                riseDeeper.innerHTML = '<option value="">Select an option…</option>'
+                    + options.map(o => '<option value="' + o + '">' + o + '</option>').join('');
+                riseDeeperWrap.style.display = 'block';
+                riseDeeper.required = true;
+            } else {
+                riseDeeperWrap.style.display = 'none';
+                riseDeeper.required = false;
+                riseDeeper.value = '';
+            }
+        });
+    }
+
+    if (riseForm) {
+        riseForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('riseName').value;
+            const email = document.getElementById('riseEmail').value;
+            const phone = document.getElementById('risePhone').value;
+            const service = riseService.value;
+            const deeper = riseDeeper.value;
+
+            const subject = 'New Inquiry - Solais HR Consulting';
+            const bodyLines = [
+                'Name: ' + name,
+                'Email: ' + email,
+                'Phone: ' + (phone || 'Not provided'),
+                'Interested in: ' + service
+            ];
+            if (deeper) bodyLines.push('Specifically: ' + deeper);
+
+            const mailto = 'mailto:ccoleman@solaishr.com'
+                + '?subject=' + encodeURIComponent(subject)
+                + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+            window.location.href = mailto;
+        });
+    }
+</script>
+
+</body>
+</html>
